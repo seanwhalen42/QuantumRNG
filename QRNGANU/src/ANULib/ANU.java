@@ -17,6 +17,14 @@ import javax.json.*;
  * @author Sean
  */
 public class ANU {
+    /**
+     * Gets an array of random numbers from ANU
+     * @param arrayLength The length of the array to return
+     * @param dataType The type of number to return. Must be "uint8", "uint16" or "hex16"
+     * @param blockSize The length of each block. Only used for hex16 data
+     * @return An array of random ints
+     * @throws Exception 
+     */
     public static int[] QRNG(int arrayLength, String dataType, int blockSize) throws Exception {
         if (arrayLength < 1){
             throw new BadRNGRequestException("arrayLength too small");
